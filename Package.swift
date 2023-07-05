@@ -3,16 +3,9 @@
 import PackageDescription
 
 let package = Package(name: "SJFluidSegmentedControl",
-                      platforms: [.macOS(.v10_13),
-                                  .iOS(.v11),
-                                  .tvOS(.v11),
-                                  .watchOS(.v4)],
                       products: [.library(name: "SJFluidSegmentedControl",
                                           targets: ["SJFluidSegmentedControl_Example"])],
                       targets: [.target(name: "SJFluidSegmentedControl_Example",
                                         exclude: ["Info.plist"]),
-                                .testTarget(name: "SJFluidSegmentedControl_Tests",
-                                            dependencies: ["SJFluidSegmentedControl_Example"],
-                                            exclude: ["Info.plist", "Test Plans"],
-                                            resources: [.process("Resources")])],
+                                ],
                       swiftLanguageVersions: [.v5])
